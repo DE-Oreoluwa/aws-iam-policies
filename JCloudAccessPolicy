@@ -1,0 +1,40 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "JCloudPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateUser",
+                "iam:GetUser",
+                "iam:EnableMFADevice",
+                "iam:UpdateLoginProfile"
+            ],
+            "Resource": [
+                "arn:aws:iam::849287543306:user/*"
+            ]
+        },
+        {
+            "Sid": "JCloudRestrictions",
+            "Effect": "Deny",
+            "Action": [
+                "iam:DeleteUser",
+                "iam:DeletePolicy",
+                "iam:CreateAccessKey"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "JCloudListUsers",
+            "Effect": "Allow",
+            "Action": [
+                "iam:ListUsers"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}
