@@ -1,0 +1,30 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "TeamLeadPolicy",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateGroup",
+                "iam:AddUserToGroup",
+                "iam:RemoveUserFromGroup",
+                "iam:GetGroup",
+                "iam:ListGroups"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "DenyTeamLead",
+            "Effect": "Deny",
+            "Action": [
+                "iam:DeleteGroup",
+                "iam:AttachGroupPolicy"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}
